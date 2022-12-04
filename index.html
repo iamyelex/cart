@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-1">
+      <img src="/images/logo.svg" alt="logo" id="logo">
+    </div>
+
+    <div class="header-2">
+      <a href="" class="h2-a"><p class="h2-items">Collections</p></a>
+      <a href="" class="h2-a"><p class="h2-items">Men</p></a>
+      <a href="" class="h2-a"><p class="h2-items">Women</p></a>
+      <a href="" class="h2-a"><p class="h2-items">About</p></a>
+      <a href="" class="h2-a"><p class="h2-items">Contact</p></a>
+    </div>
+
+    <div class="header-3">
+      <div class="h3-1">
+        <button class="h3-button" onclick="displayCart()"><img src="/images/icon-cart.svg" alt="cart-logo" id="cart-logo" onclick="hideCart()">
+          <span class="h3-span"></span>
+        </button>
+      </div>
+      <div><a href="" class="h3-a"><img src="/images/image-avatar.png" alt="" id="avatar-logo"></a></div>
+      <div class="h3-3">
+        <span id="show-cart">
+          <h4 id="h3-3-heading">Cart</h4>
+          <hr>
+          <div class="cart-spacing">
+            <p id="cart-message"> </p> 
+            <div class="cart-flex">
+              <div><img src="/images/image-product-1-thumbnail.jpg" alt="" id="cart-image"></div>
+              <div id="cart-message2">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>
+                  <span id="price"></span>
+                  <span id="bold"> </span>
+                </p>
+              </div>
+              <div><button class="h3-button cartButton" onclick="deleteCart()"><img src="/images/icon-delete.svg" alt=""></button></div>
+            </div>
+            <button id="checkout">Checkout</button>
+          </div>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <hr class="hr">
+  
+  <section>
+    <div id="sub-section1">
+      <div><img src="/images/image-product-1.jpg" alt="sneakers" id="sneakers-img"></div>
+      <div class="sub-sub1">
+        <div><button class="btn-sub1" onclick="changeImage('/images/image-product-1.jpg')"><img src="/images/image-product-1-thumbnail.jpg" alt="" class="img-thumbnail image-1"></button></div>
+        <div><button class="btn-sub1" onclick="changeImage('/images/image-product-2.jpg')"><img src="/images/image-product-2-thumbnail.jpg" alt="" class="img-thumbnail image-2"></button></div>
+        <div><button class="btn-sub1" onclick="changeImage('/images/image-product-3.jpg')"><img src="/images/image-product-3-thumbnail.jpg" alt="" class="img-thumbnail image-3"></button></div>
+        <div><button class="btn-sub1" onclick="changeImage('/images/image-product-4.jpg')"><img src="/images/image-product-4-thumbnail.jpg" alt="" class="img-thumbnail image-4"></button></div>
+      </div>
+
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="/images/image-product-1.jpg"  class="image-carousel">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="/images/image-product-2.jpg" class="image-carousel" >
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="/images/image-product-3.jpg" class="image-carousel" >
+        </div>
+
+        <div class="mySlides fade">
+          <img src="/images/image-product-4.jpg" class="image-carousel" >
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+    </div>
+  
+    <div id="sub-section2">
+      <p id="sneak1">SNEAKER COMPANY</p>
+      <p id="section-p2">Fall Limited Edition Sneakers</p>
+      <p id="section-p3">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div id="section-p4"> 
+        <p id="span1">$125.00</p> <p id="span2">50%</p> 
+        <p id="section-p5-1"><s>$250.00</s></p>
+      </div>
+      <p id="section-p5"><s>$250.00</s></p>
+      <div id="section-p6">
+        <div id="p6-1">
+          <div><button class="btn-p6" onclick="decreaseNumber()"><img src="/images/icon-minus.svg" alt="" ></button></div>
+          <div><span id="p6-span"> 0 </span></div>
+          <div><button class="btn-p6" onclick="increaseCartNumber()"><img src="/images/icon-plus.svg" alt="" ></button></div>
+        </div>
+        <div><button id="btn-2" onclick="addToCart()"><img src="/images/icon-cart.svg" alt="cart logo" id="cart"> Add to cart </button> </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
